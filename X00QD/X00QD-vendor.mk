@@ -418,7 +418,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00QD/proprietary/framework/dpmapi.jar:system/framework/dpmapi.jar \
     vendor/asus/X00QD/proprietary/framework/embmslibrary.jar:system/framework/embmslibrary.jar \
     vendor/asus/X00QD/proprietary/framework/izat.xt.srv.jar:system/framework/izat.xt.srv.jar \
-    vendor/asus/X00QD/proprietary/framework/qcrilhook.jar:system/framework/qcrilhook.jar \
     vendor/asus/X00QD/proprietary/framework/qti-telephony-common.jar:system/framework/qti-telephony-common.jar \
     vendor/asus/X00QD/proprietary/framework/tcmclient.jar:system/framework/tcmclient.jar \
     vendor/asus/X00QD/proprietary/framework/vendor.qti.data.factory-V1.0-java.jar:system/framework/vendor.qti.data.factory-V1.0-java.jar \
@@ -3631,4 +3630,5 @@ PRODUCT_PACKAGES += \
     TimeService \
     TrustZoneAccessService \
     Zenimoji \
+    qcrilhook \
     WfdCommon
