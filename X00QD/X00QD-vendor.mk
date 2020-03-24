@@ -1,4 +1,4 @@
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -373,7 +373,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00QD/proprietary/etc/firmware/tru2life/ADInitParam.xml:system/etc/firmware/tru2life/ADInitParam.xml \
     vendor/asus/X00QD/proprietary/etc/init/dpmd.rc:system/etc/init/dpmd.rc \
     vendor/asus/X00QD/proprietary/etc/init/wfdservice.rc:system/etc/init/wfdservice.rc \
-    vendor/asus/X00QD/proprietary/etc/perf/whitelistedapps.xml:system/etc/perf/whitelistedapps.xml \
     vendor/asus/X00QD/proprietary/etc/permissions/audiosphere.xml:system/etc/permissions/audiosphere.xml \
     vendor/asus/X00QD/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
     vendor/asus/X00QD/proprietary/etc/permissions/com.qti.dpmframework.xml:system/etc/permissions/com.qti.dpmframework.xml \
@@ -418,6 +417,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00QD/proprietary/framework/dpmapi.jar:system/framework/dpmapi.jar \
     vendor/asus/X00QD/proprietary/framework/embmslibrary.jar:system/framework/embmslibrary.jar \
     vendor/asus/X00QD/proprietary/framework/izat.xt.srv.jar:system/framework/izat.xt.srv.jar \
+    vendor/asus/X00QD/proprietary/framework/qcrilhook.jar:system/framework/qcrilhook.jar \
     vendor/asus/X00QD/proprietary/framework/qti-telephony-common.jar:system/framework/qti-telephony-common.jar \
     vendor/asus/X00QD/proprietary/framework/tcmclient.jar:system/framework/tcmclient.jar \
     vendor/asus/X00QD/proprietary/framework/vendor.qti.data.factory-V1.0-java.jar:system/framework/vendor.qti.data.factory-V1.0-java.jar \
@@ -425,7 +425,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00QD/proprietary/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar:system/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar \
     vendor/asus/X00QD/proprietary/framework/vendor.qti.hardware.data.latency-V1.0-java.jar:system/framework/vendor.qti.hardware.data.latency-V1.0-java.jar \
     vendor/asus/X00QD/proprietary/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar:system/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar \
-    vendor/asus/X00QD/proprietary/framework/vendor.qti.hardware.factory-V1.0-java.jar:system/framework/vendor.qti.hardware.factory-V1.0-java.jar \
     vendor/asus/X00QD/proprietary/framework/vendor.qti.hardware.soter-V1.0-java.jar:system/framework/vendor.qti.hardware.soter-V1.0-java.jar \
     vendor/asus/X00QD/proprietary/framework/vendor.qti.ims.callinfo-V1.0-java.jar:system/framework/vendor.qti.ims.callinfo-V1.0-java.jar \
     vendor/asus/X00QD/proprietary/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar:system/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar \
@@ -459,9 +458,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00QD/proprietary/lib/libmmparser_lite.so:system/lib/libmmparser_lite.so \
     vendor/asus/X00QD/proprietary/lib/libmmrtpdecoder.so:system/lib/libmmrtpdecoder.so \
     vendor/asus/X00QD/proprietary/lib/libmmrtpencoder.so:system/lib/libmmrtpencoder.so \
-    vendor/asus/X00QD/proprietary/lib/libqti-perfd-client_system.so:system/lib/libqti-perfd-client_system.so \
-    vendor/asus/X00QD/proprietary/lib/libqti-util_system.so:system/lib/libqti-util_system.so \
-    vendor/asus/X00QD/proprietary/lib/libqti_performance.so:system/lib/libqti_performance.so \
     vendor/asus/X00QD/proprietary/lib/librcc.so:system/lib/librcc.so \
     vendor/asus/X00QD/proprietary/lib/libwfdavenhancements.so:system/lib/libwfdavenhancements.so \
     vendor/asus/X00QD/proprietary/lib/libwfdclient.so:system/lib/libwfdclient.so \
@@ -492,8 +488,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00QD/proprietary/lib/vendor.qti.gnss@2.1.so:system/lib/vendor.qti.gnss@2.1.so \
     vendor/asus/X00QD/proprietary/lib/vendor.qti.hardware.data.dynamicdds@1.0.so:system/lib/vendor.qti.hardware.data.dynamicdds@1.0.so \
     vendor/asus/X00QD/proprietary/lib/vendor.qti.hardware.data.latency@1.0.so:system/lib/vendor.qti.hardware.data.latency@1.0.so \
-    vendor/asus/X00QD/proprietary/lib/vendor.qti.hardware.factory@1.0.so:system/lib/vendor.qti.hardware.factory@1.0.so \
-    vendor/asus/X00QD/proprietary/lib/vendor.qti.hardware.perf@1.0.so:system/lib/vendor.qti.hardware.perf@1.0.so \
     vendor/asus/X00QD/proprietary/lib/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so:system/lib/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so \
     vendor/asus/X00QD/proprietary/lib/vendor.qti.hardware.scve.objecttracker@1.0.so:system/lib/vendor.qti.hardware.scve.objecttracker@1.0.so \
     vendor/asus/X00QD/proprietary/lib/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so:system/lib/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so \
@@ -533,9 +527,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00QD/proprietary/lib64/libmmparser_lite.so:system/lib64/libmmparser_lite.so \
     vendor/asus/X00QD/proprietary/lib64/libmmrtpdecoder.so:system/lib64/libmmrtpdecoder.so \
     vendor/asus/X00QD/proprietary/lib64/libmmrtpencoder.so:system/lib64/libmmrtpencoder.so \
-    vendor/asus/X00QD/proprietary/lib64/libqti-perfd-client_system.so:system/lib64/libqti-perfd-client_system.so \
-    vendor/asus/X00QD/proprietary/lib64/libqti-util_system.so:system/lib64/libqti-util_system.so \
-    vendor/asus/X00QD/proprietary/lib64/libqti_performance.so:system/lib64/libqti_performance.so \
     vendor/asus/X00QD/proprietary/lib64/librcc.so:system/lib64/librcc.so \
     vendor/asus/X00QD/proprietary/lib64/libseemore.so:system/lib64/libseemore.so \
     vendor/asus/X00QD/proprietary/lib64/libwfdclient.so:system/lib64/libwfdclient.so \
@@ -553,8 +544,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00QD/proprietary/lib64/vendor.qti.gnss@2.1.so:system/lib64/vendor.qti.gnss@2.1.so \
     vendor/asus/X00QD/proprietary/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so:system/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so \
     vendor/asus/X00QD/proprietary/lib64/vendor.qti.hardware.data.latency@1.0.so:system/lib64/vendor.qti.hardware.data.latency@1.0.so \
-    vendor/asus/X00QD/proprietary/lib64/vendor.qti.hardware.factory@1.0.so:system/lib64/vendor.qti.hardware.factory@1.0.so \
-    vendor/asus/X00QD/proprietary/lib64/vendor.qti.hardware.perf@1.0.so:system/lib64/vendor.qti.hardware.perf@1.0.so \
     vendor/asus/X00QD/proprietary/lib64/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so:system/lib64/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so \
     vendor/asus/X00QD/proprietary/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so:system/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so \
     vendor/asus/X00QD/proprietary/lib64/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so:system/lib64/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so \
@@ -655,13 +644,14 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00QD/proprietary/vendor/bin/hostapd_cmd:$(TARGET_COPY_OUT_VENDOR)/bin/hostapd_cmd \
     vendor/asus/X00QD/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_VENDOR)/bin/hvdcp_opti \
     vendor/asus/X00QD/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service \
+    vendor/asus/X00QD/proprietary/vendor/lib/hw/lights.sdm660.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/lights.sdm660.so \
+    vendor/asus/X00QD/proprietary/vendor/lib64/hw/lights.sdm660.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/lights.sdm660.so \
     vendor/asus/X00QD/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.0-service-qti \
     vendor/asus/X00QD/proprietary/vendor/bin/hw/android.hardware.drm@1.1-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.1-service.widevine \
     vendor/asus/X00QD/proprietary/vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gatekeeper@1.0-service-qti \
     vendor/asus/X00QD/proprietary/vendor/bin/hw/android.hardware.keymaster@3.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@3.0-service-qti \
     vendor/asus/X00QD/proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.0-service-qti \
     vendor/asus/X00QD/proprietary/vendor/bin/hw/android.hardware.power@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.power@1.0-service \
-    vendor/asus/X00QD/proprietary/vendor/bin/hw/android.hardware.thermal@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.thermal@1.0-service \
     vendor/asus/X00QD/proprietary/vendor/bin/hw/android.hardware.vibrator@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.vibrator@1.0-service \
     vendor/asus/X00QD/proprietary/vendor/bin/hw/qcrild:$(TARGET_COPY_OUT_VENDOR)/bin/hw/qcrild \
     vendor/asus/X00QD/proprietary/vendor/bin/hw/rild:$(TARGET_COPY_OUT_VENDOR)/bin/hw/rild \
@@ -737,8 +727,10 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00QD/proprietary/vendor/bin/ssgqmigd:$(TARGET_COPY_OUT_VENDOR)/bin/ssgqmigd \
     vendor/asus/X00QD/proprietary/vendor/bin/ssgtzd:$(TARGET_COPY_OUT_VENDOR)/bin/ssgtzd \
     vendor/asus/X00QD/proprietary/vendor/bin/ssn:$(TARGET_COPY_OUT_VENDOR)/bin/ssn \
+    vendor/asus/X00QD/proprietary/vendor/bin/ssr_cfg.sh:$(TARGET_COPY_OUT_VENDOR)/bin/ssr_cfg.sh \
     vendor/asus/X00QD/proprietary/vendor/bin/ssr_diag:$(TARGET_COPY_OUT_VENDOR)/bin/ssr_diag \
     vendor/asus/X00QD/proprietary/vendor/bin/ssr_setup:$(TARGET_COPY_OUT_VENDOR)/bin/ssr_setup \
+    vendor/asus/X00QD/proprietary/vendor/bin/ssr_ui.sh:$(TARGET_COPY_OUT_VENDOR)/bin/ssr_ui.sh \
     vendor/asus/X00QD/proprietary/vendor/bin/subsystem_ramdump:$(TARGET_COPY_OUT_VENDOR)/bin/subsystem_ramdump \
     vendor/asus/X00QD/proprietary/vendor/bin/tbaseLoader:$(TARGET_COPY_OUT_VENDOR)/bin/tbaseLoader \
     vendor/asus/X00QD/proprietary/vendor/bin/test_diag:$(TARGET_COPY_OUT_VENDOR)/bin/test_diag \
@@ -1050,7 +1042,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00QD/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
     vendor/asus/X00QD/proprietary/vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@3.0-service-qti.rc \
     vendor/asus/X00QD/proprietary/vendor/etc/init/android.hardware.power@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.power@1.0-service.rc \
-    vendor/asus/X00QD/proprietary/vendor/etc/init/android.hardware.thermal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.thermal@1.0-service.rc \
     vendor/asus/X00QD/proprietary/vendor/etc/init/android.hardware.vibrator@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.vibrator@1.0-service.rc \
     vendor/asus/X00QD/proprietary/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc \
     vendor/asus/X00QD/proprietary/vendor/etc/init/qcrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qcrild.rc \
@@ -1248,12 +1239,9 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00QD/proprietary/vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.mapper@2.0-impl.so \
     vendor/asus/X00QD/proprietary/vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.keymaster@3.0-impl-qti.so \
     vendor/asus/X00QD/proprietary/vendor/lib/hw/android.hardware.power@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.power@1.0-impl.so \
-    vendor/asus/X00QD/proprietary/vendor/lib/hw/android.hardware.thermal@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.thermal@1.0-impl.so \
     vendor/asus/X00QD/proprietary/vendor/lib/hw/android.hardware.vibrator@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.vibrator@1.0-impl.so \
     vendor/asus/X00QD/proprietary/vendor/lib/hw/audio.primary.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.default.so \
     vendor/asus/X00QD/proprietary/vendor/lib/hw/audio.primary.sdm660.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.sdm660.so \
-    vendor/asus/X00QD/proprietary/vendor/lib/hw/audio.r_submix.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.r_submix.default.so \
-    vendor/asus/X00QD/proprietary/vendor/lib/hw/audio.usb.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.usb.default.so \
     vendor/asus/X00QD/proprietary/vendor/lib/hw/camera.sdm660.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/camera.sdm660.so \
     vendor/asus/X00QD/proprietary/vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/com.qualcomm.qti.ant@1.0-impl.so \
     vendor/asus/X00QD/proprietary/vendor/lib/hw/com.qualcomm.qti.bluetooth_audio@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/com.qualcomm.qti.bluetooth_audio@1.0-impl.so \
@@ -3112,6 +3100,8 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00QD/proprietary/vendor/lib/libxtadapter.so:$(TARGET_COPY_OUT_VENDOR)/lib/libxtadapter.so \
     vendor/asus/X00QD/proprietary/vendor/lib/mediadrm/libdrmclearkeyplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/mediadrm/libdrmclearkeyplugin.so \
     vendor/asus/X00QD/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:$(TARGET_COPY_OUT_VENDOR)/lib/mediadrm/libwvdrmengine.so \
+    vendor/asus/X00QD/proprietary/vendor/lib/modules/qca_cld3/qca_cld3_wlan.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/qca_cld3/qca_cld3_wlan.ko \
+    vendor/asus/X00QD/proprietary/vendor/lib/modules/texfat.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/texfat.ko \
     vendor/asus/X00QD/proprietary/vendor/lib/nfc_nci.nqx.default.hw.so:$(TARGET_COPY_OUT_VENDOR)/lib/nfc_nci.nqx.default.hw.so \
     vendor/asus/X00QD/proprietary/vendor/lib/qcdrm/playready/lib/libprdrmdecrypt_customer.so:$(TARGET_COPY_OUT_VENDOR)/lib/qcdrm/playready/lib/libprdrmdecrypt_customer.so \
     vendor/asus/X00QD/proprietary/vendor/lib/qcdrm/playready/lib/libtzplayready_customer.so:$(TARGET_COPY_OUT_VENDOR)/lib/qcdrm/playready/lib/libtzplayready_customer.so \
@@ -3218,12 +3208,9 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00QD/proprietary/vendor/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.mapper@2.0-impl.so \
     vendor/asus/X00QD/proprietary/vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so \
     vendor/asus/X00QD/proprietary/vendor/lib64/hw/android.hardware.power@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.power@1.0-impl.so \
-    vendor/asus/X00QD/proprietary/vendor/lib64/hw/android.hardware.thermal@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.thermal@1.0-impl.so \
     vendor/asus/X00QD/proprietary/vendor/lib64/hw/android.hardware.vibrator@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.vibrator@1.0-impl.so \
     vendor/asus/X00QD/proprietary/vendor/lib64/hw/audio.primary.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.primary.default.so \
     vendor/asus/X00QD/proprietary/vendor/lib64/hw/audio.primary.sdm660.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.primary.sdm660.so \
-    vendor/asus/X00QD/proprietary/vendor/lib64/hw/audio.r_submix.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.r_submix.default.so \
-    vendor/asus/X00QD/proprietary/vendor/lib64/hw/audio.usb.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.usb.default.so \
     vendor/asus/X00QD/proprietary/vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so \
     vendor/asus/X00QD/proprietary/vendor/lib64/hw/com.qualcomm.qti.bluetooth_audio@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qualcomm.qti.bluetooth_audio@1.0-impl.so \
     vendor/asus/X00QD/proprietary/vendor/lib64/hw/fingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.default.so \
@@ -3505,7 +3492,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/X00QD/proprietary/vendor/lib64/libsystem_health_mon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsystem_health_mon.so \
     vendor/asus/X00QD/proprietary/vendor/lib64/libthermalioctl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalioctl.so \
     vendor/asus/X00QD/proprietary/vendor/lib64/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtime_genoff.so \
-    vendor/asus/X00QD/proprietary/vendor/lib64/libtinycompress.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinycompress.so \
     vendor/asus/X00QD/proprietary/vendor/lib64/libtinycompress_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinycompress_vendor.so \
     vendor/asus/X00QD/proprietary/vendor/lib64/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyxml2_1.so \
     vendor/asus/X00QD/proprietary/vendor/lib64/libtzdrmgenprov.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtzdrmgenprov.so \
@@ -3613,6 +3599,7 @@ PRODUCT_PACKAGES += \
     com.quicinc.cne.server@2.1 \
     com.quicinc.cne.server@2.2 \
     QtiTelephonyService \
+    QtiSystemService \
     aptxui \
     datastatusnotification \
     embms \
@@ -3622,13 +3609,20 @@ PRODUCT_PACKAGES += \
     dpmserviceapp \
     ims \
     qcrilmsgtunnel \
+    qcrilhook \
     AsusCamera \
     ConnectionSecurityService \
     PowerOffAlarm \
     SSGTelemetryService \
     SelfieMaster \
     TimeService \
+    SVIService \
+    Qmmi \
     TrustZoneAccessService \
+    vendor.qti.hardware.alarm-V1.0-java \
+    vendor.qti.hardware.factory-V1.0-java \
+    CallFeaturesSetting \
+    vendor.qti.hardware.sensorscalibrate-V1.0-java \
+    uceShimService \
     Zenimoji \
-    qcrilhook \
     WfdCommon

@@ -1,4 +1,4 @@
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -209,9 +209,31 @@ LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := QtiSystemService
+LOCAL_MODULE_OWNER := asus
+LOCAL_SRC_FILES := proprietary/app/QtiSystemService/QtiSystemService.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := aptxui
 LOCAL_MODULE_OWNER := asus
 LOCAL_SRC_FILES := proprietary/app/aptxui/aptxui.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := CallFeaturesSetting
+LOCAL_MODULE_OWNER := asus
+LOCAL_SRC_FILES := proprietary/app/CallFeaturesSetting/CallFeaturesSetting.apk
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
@@ -310,6 +332,16 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_SUFFIX := .apk
 LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := qcrilhook
+LOCAL_MODULE_OWNER := asus
+LOCAL_SRC_FILES := proprietary/framework/qcrilhook.jar
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_SUFFIX := .jar
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -412,16 +444,6 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := WfdCommon
 LOCAL_MODULE_OWNER := asus
 LOCAL_SRC_FILES := proprietary/framework/WfdCommon.jar
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_MODULE_SUFFIX := .jar
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := qcrilhook
-LOCAL_MODULE_OWNER := asus
-LOCAL_SRC_FILES := proprietary/framework/qcrilhook.jar
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := JAVA_LIBRARIES
